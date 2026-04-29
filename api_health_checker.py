@@ -3,7 +3,6 @@ import json
 from utils.validator import validate_status_code, validate_response_time
 
 URL = "https://jsonplaceholder.typicode.com/posts"
-
 def log_bug(issue, value):
     with open("reports/bugs.txt", "a") as f:
         f.write(f"{issue} -> {value}\n")
