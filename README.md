@@ -2,18 +2,18 @@
 
 ## 📌 Overview
 
-TestGuard-API is a lightweight API health monitoring and testing tool built using Python. It validates API responses, checks performance, and logs issues for debugging, making it useful for backend validation and QA workflows.
+TestGuard-API is a lightweight API health monitoring and testing tool built using Python. It validates API responses, checks performance, and logs issues for debugging, making it suitable for backend validation and QA workflows.
 
 ---
 
 ## 🧪 Features
 
-* 🔌 API Testing using Python requests
+* 🔌 API Testing using Python `requests`
 * 📊 Status code and response time validation
 * 🧠 Custom validation utilities
-* 🐞 Bug logging system for failed checks
+* 🐞 Bug logging system for failure scenarios
 * ⚡ Automated test execution using PyTest
-* 📄 JSON-based reporting
+* 📄 JSON-based reporting for API health
 
 ---
 
@@ -33,6 +33,7 @@ TestGuard_API/
 ├── testcases/
 │   └── test_api.py
 ├── utils/
+│   ├── __init__.py
 │   └── validator.py
 ├── reports/
 │   └── bugs.txt
@@ -45,7 +46,7 @@ TestGuard_API/
 
 ## ▶️ How to Run
 
-### 1. Setup Environment
+### 1. Setup Virtual Environment
 
 ```
 py -m venv venv
@@ -58,13 +59,13 @@ py -m venv venv
 pip install -r requirements.txt
 ```
 
-### 3. Run API Checker
+### 3. Run API Health Checker
 
 ```
 python api_health_checker.py
 ```
 
-### 4. Run Tests
+### 4. Run Test Cases
 
 ```
 pytest -v
@@ -72,22 +73,50 @@ pytest -v
 
 ---
 
-## 📊 Output
+## 📊 Sample Output
 
-* `report.json` → contains API status and response time
-* `reports/bugs.txt` → logs detected issues
+### report.json
+
+```
+{
+  "status_code": 200,
+  "response_time": 0.25
+}
+```
+
+---
+
+## 🐞 Bug Logging Example
+
+To simulate failure scenarios, invalid endpoints or thresholds were used.
+
+### Sample bugs.txt
+
+```
+[ERROR] Status Code Issue -> 404
+[WARNING] Slow Response -> 3.2 sec
+```
 
 ---
 
 ## 🎯 Use Cases
 
 * API health monitoring
-* Regression testing
 * Backend validation
+* Regression testing
+* Detecting API failures and performance issues
+
+---
+
+## 💡 Key Highlights
+
+* Designed for real-world QA workflows
+* Demonstrates test case validation and bug tracking
+* Includes both automated testing and monitoring logic
+* Simulates failure scenarios for robust testing
 
 ---
 
 ## 👨‍💻 Author
 
 Srishti Jaiswal
-
